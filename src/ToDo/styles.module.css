@@ -1,0 +1,86 @@
+.span{
+    margin: 10px;
+    width: 100px;
+    text-align: center;
+}
+.li{
+    width: 220px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 4px;
+    margin: 5px;
+}
+.butt{
+    display: flex;
+    font-weight: bolder;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color: white;
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+.check{
+    margin-left: 5px;
+}
+.add{
+    background-color: rgb(15, 181, 15);
+    color: white;
+    width: 45px;
+    height: 30px;
+    margin-left: 5px;
+    border-radius: 5px;
+    margin-bottom: 7px;
+}
+
+.buttons{
+    margin-top: 7px;
+    border-radius: 4px;
+    padding-left: 15px;
+    padding-right: 10px;  
+    margin-right: 5px; 
+}
+.error{
+    border: 2px solid rgb(177, 8, 8);
+  }
+  .errormassage{
+    color: red;
+    font-size: 14px;
+  }
+.activefilter{
+    background-color: rgb(15, 181, 15);
+    color: white;
+    margin-top: 7px;
+    border-radius: 4px;
+    padding-left: 15px;
+    padding-right: 10px;  
+    margin-right: 5px; 
+}
+.isDone{
+    opacity: 0.3;
+    width: 220px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 16px;
+    text-align: center;
+}

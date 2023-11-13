@@ -1,0 +1,52 @@
+.task {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 290px;
+  height: 350px;
+  background:transparent;
+  color:#fff;
+  border: 3px solid rgb(35, 77, 162);
+  border-radius: 10px;
+  padding: 10px;
+  backdrop-filter:blur(20px);
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.task p {
+  text-align: center;
+  font-size: 16px;
+  color: white;
+}
+
+.iconsContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.iconsContainer img {
+  align-self: flex-end;
+  width: 35px;
+  margin: 10px;
+}
+.iconsContainer button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.inp{
+  margin-top: 10px;
+  border: 3px solid rgb(35, 77, 162);
+  border-bottom-left-radius: 50px;
+  border-top-left-radius:50px ;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius:50px;
+  text-align: start;
+}
+.inp p {
+  margin-top:16px;
+  margin-left: 13px;
+  text-align: start;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

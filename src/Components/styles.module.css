@@ -1,0 +1,179 @@
+.TasksContainer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.deleteAll {
+  display: flex;
+  justify-content: center;
+  margin-top: 75px;
+}
+
+
+
+/* CSS */
+.button1 {
+  --c: #fff;
+  /* text color */
+  background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p,100%)/300% no-repeat,
+    #c71414;
+  /* background color */
+  color: #0000;
+  border: none;
+  transform: perspective(500px) rotateY(calc(15deg*var(--_i,-1)));
+  text-shadow: calc(var(--_i,-1)* 0.08em) -.01em 0   var(--c),
+    calc(var(--_i,-1)*-0.08em)  .01em 2px #0004;
+  outline-offset: .1em;
+  transition: 0.3s;
+}
+
+.button1:hover,
+.button1:focus-visible {
+  --_p: 0%;
+  --_i: 1;
+}
+
+.button1:active {
+  text-shadow: none;
+  color: var(--c);
+  box-shadow: inset 0 0 9e9q #0005;
+  transition: 0s;
+}
+
+.button1 {
+  font-weight: bold;
+  font-size: 15px;
+  margin: 0;
+  cursor: pointer;
+  border-radius: 7px;
+  width: 160px;
+  height: 45px;
+}
+.button2 {
+  --c: #fff;
+  /* text color */
+  background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p,100%)/300% no-repeat,
+    rgb(58, 203, 22);
+  /* background color */
+  color: #0000;
+  border: none;
+  transform: perspective(500px) rotateY(calc(15deg*var(--_i,-1)));
+  text-shadow: calc(var(--_i,-1)* 0.08em) -.01em 0   var(--c),
+    calc(var(--_i,-1)*-0.08em)  .01em 2px #0004;
+  outline-offset: .1em;
+  transition: 0.3s;
+}
+
+.button2:hover,
+.button2:focus-visible {
+  --_p: 0%;
+  --_i: 1;
+}
+
+.button2:active {
+  text-shadow: none;
+  color: var(--c);
+  box-shadow: inset 0 0 9e9q #0005;
+  transition: 0s;
+}
+
+.button2 {
+  font-weight: bold;
+  font-size: 15px;
+  margin: 0;
+  cursor: pointer;
+  border-radius: 7px;
+  width: 160px;
+  height: 45px;
+  margin-left: 50px;
+}
+
+.button3 {
+  --c: #fff;
+  /* text color */
+  background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p,100%)/300% no-repeat,
+    rgb(22, 70, 203);
+  /* background color */
+  color: #0000;
+  border: none;
+  transform: perspective(500px) rotateY(calc(15deg*var(--_i,-1)));
+  text-shadow: calc(var(--_i,-1)* 0.08em) -.01em 0   var(--c),
+    calc(var(--_i,-1)*-0.08em)  .01em 2px #0004;
+  outline-offset: .1em;
+  transition: 0.3s;
+}
+
+.button3:hover,
+.button3:focus-visible {
+  --_p: 0%;
+  --_i: 1;
+}
+
+.button3:active {
+  text-shadow: none;
+  color: var(--c);
+  box-shadow: inset 0 0 9e9q #0005;
+  transition: 0s;
+}
+
+.button3 {
+  font-weight: bold;
+  font-size: 15px;
+  margin: 0;
+  cursor: pointer;
+  border-radius: 7px;
+  width: 160px;
+  height: 45px;
+  
+}
+
+.content{
+  width:100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content h1{
+  user-select: none;
+  position: absolute;
+  font-size: 65px;
+  font-weight: bolder;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+.content h1:nth-child(1)
+{
+  color: transparent;
+  -webkit-text-stroke: 1px blue;
+  z-index: 999;
+}
+.content h1:nth-child(2)
+{
+  color: rgb(22, 70, 203);
+  z-index: 2;
+  animation: animate 2s ease-in-out infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+    clip-path: polygon(0% 45%,15% 44%, 32% 50%,54% 60%,70% 61%,84% 59%,100% 52%,100% 100%,0% 100%);
+  }
+  50%
+  {
+    clip-path: polygon(0% 60%,16% 65%, 34% 66%,51% 62%,67% 50%,84% 45%,100% 46%,100% 100%,0% 100%);
+  }
+}
+.main{
+  background-image: url(./Task/imna.jpg);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+   height: 95vh;
+  background-size: cover;
+  background-position: center; 
+}
