@@ -1,0 +1,68 @@
+.navMenu {
+    position: sticky;
+    top: 0;
+    right: 0;
+    height: 80px;
+    border: 2px solid skyblue;
+    width: 60%;
+    margin: auto;
+    z-index: 1000;
+    background-color: rgb(22, 70, 203);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+
+  }
+  
+  .navMenu a {
+    margin: 10px;
+    margin-top: 20px;
+    color: #f6f4e6;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .navMenu a:hover {
+    color: skyblue;
+  }
+  .menubl{
+    margin: auto;
+    width: 380px;
+    margin-top: 10px;
+  }
+  
+  .navMenu .dot {
+    width: 10px;
+    height: 10px;
+    background: skyblue;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .navMenu a:nth-child(1):hover ~ .dot {
+    transform: translatex(56px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+  
+  .navMenu a:nth-child(2):hover ~ .dot {
+    transform: translateX(193px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+  
+  .navMenu a:nth-child(3):hover ~ .dot {
+    transform: translateX(317px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+
+  

@@ -23,10 +23,12 @@ export const createTaskRequest = async (task, addNotification) => {
   }
 };
 
-export const getTaskRequest = async (setTasks) => {
+export const getTaskRequest = async (setTasks,setFilteredTasks) => {
   const response = await fetch(`${API_HOST}/task`);
   const tasks = await response.json();
   setTasks(tasks);
+  setFilteredTasks(tasks)
+
 
 };
 

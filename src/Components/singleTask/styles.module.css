@@ -1,8 +1,14 @@
 .container {
+  border: 3px solid  rgb(35, 77, 162);
+  background: transparent;
+  backdrop-filter:blur(20px);
+  border-radius: 10px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
   width: 50%;
-  margin: auto;
   height: 400px;
-  background-color: rgb(176, 122, 227);
   color: white;
   display: flex;
   flex-direction: column;
@@ -10,4 +16,21 @@
 }
 .container p {
   margin: 20px;
+}
+
+.inp{
+  width: 80%;
+  margin-top: 35px;
+  border: 3px solid rgb(35, 77, 162);
+  border-bottom-left-radius: 50px;
+  border-top-left-radius:50px ;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius:50px;
+  text-align: start;
+}
+.inp p {
+  margin-top:16px;
+  margin-left: 13px;
+  text-align: start;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

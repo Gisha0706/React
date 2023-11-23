@@ -9,7 +9,7 @@ function ColorSchemesExample() {
     <>
       <br />
       <Navbar
-        style={{ borderRadius: "5px",position:"absolute",top:"0",width:"90%", }}
+        className={Style.nav}
         bg="primary"
         data-bs-theme="dark"
       >

@@ -4,6 +4,7 @@ import ToDo from "./Components/ToDo";
 import SingleTask from "./Components/singleTask/SingleTask";
 import Navbar from "./Components/Navbar/Navbar";
 import Contacts from './Components/Contacts'
+import Aboute  from "./Components/Aboute";
 // import A from "./functionalComponents/A";
 import { ToastContainer, toast, TypeOptions } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -25,7 +26,7 @@ const App = () => {
     addNotification,
   };
   const navigate = useNavigate();
-  const containerStyles = { width: "100%", margin: "auto" };
+  const containerStyles = { width: "100%", margin: "auto", position:"absolute",};
   return (
     <>
       <Navbar />
@@ -40,6 +41,10 @@ const App = () => {
             <Route
               path="/contact"
               element={<Contacts/>}
+            />
+               <Route
+              path="/aboute"
+              element={<Aboute/>}
             />
           </Routes>
           <ToastContainer

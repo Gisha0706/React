@@ -3,9 +3,11 @@ import AddTask from "./AddTask/AddTask";
 import Task from "./Task/Task";
 import DeleteModal from "./deleteModal/deleteModal";
 import Styles from "./styles.module.css";
+import Refresh from "./Refresh";
 import { idGeneretor } from "../helpers/idGeneretor";
 import Button from "react-bootstrap/Button";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import Filter from "./Filter/Filter";
 
 import {
   createTaskRequest,
@@ -19,10 +21,12 @@ const ToDo = ({ addNotification }) => {
   // console.log(num, "num");
 
   let [tasks, setTasks] = useState([]);
+  let [filteredTasks, setFilteredTasks] = useState([]);
   let [inputValue, setInputValue] = useState({});
   let [checkedTasks, setCheckedTasks] = useState(new Set());
   let [isOpenAddModal, setIsOpenAddModal] = useState(false);
   let [isOpenDeleteModal, setIsOpenDeleteModal] = useState(false);
+  let [openmodal,setOpenmodal] = useState(false)
   let [editTask, setEditTask] = useState({});
   const inputOnChange = (e) => {
     const name = e.target.name;
@@ -155,35 +159,59 @@ const ToDo = ({ addNotification }) => {
   // },[]);
 
   useEffect(() => {
-    getTaskRequest(setTasks);
+    getTaskRequest(setTasks, setFilteredTasks);
   }, []);
-  const blockanim ={
-    hidden:{
-      y:-100,
-      opasity:0,
+  const blockanim = {
+    hidden: {
+      y: -100,
+      opasity: 0,
     },
-    visible:{
-      y:0,
-      opasity:1,
-    }
-  }
+    visible: {
+      y: 0,
+      opasity: 1,
+    },
+  };
   return (
-    <div className={Styles.main} >
+    <div className={Styles.main}>
       <motion.div
-      variants={blockanim}
-       initial="hidden"
-       whileInView="visible"
-       className={Styles.content}>
-      <h1>ToDo Project</h1>
-      <h1>ToDo Project</h1>
+        variants={blockanim}
+        initial="hidden"
+        whileInView="visible"
+        className={Styles.content}
+      >
+        <h1>ToDo Project</h1>
+        <h1>ToDo Project</h1>
       </motion.div>
 
-      <div style={{ display: "flex", justifyContent: "center",}}>
-        <button 
-        
-        className={Styles.button3} onClick={() => handleOpenModal("isOpenAddModal")}>
+      <div className={Styles.head}>
+        <button
+          className={Styles.button3}
+          onClick={() => handleOpenModal("isOpenAddModal")}
+        >
           Add Task
         </button>
+      </div>
+      <div className={Styles.search}>
+        <Filter
+          onHide={onHide}
+          filteredTasks={filteredTasks}
+          setFilteredTasks={setFilteredTasks}
+          tasks={tasks}
+          setTasks={setTasks}
+        />
+        <Button
+          style={{
+            width: "50px",
+            height: "50px",
+            backgroundColor: "rgb(22, 70, 203)",
+            border: "2px solid black",
+            borderRadius: "5px",
+            marginTop: "2.5px",
+          }}
+          onClick={() => getTaskRequest(setTasks, setFilteredTasks)}
+        >
+          <Refresh />
+        </Button>
       </div>
       {isOpenAddModal && (
         <AddTask
@@ -218,11 +246,14 @@ const ToDo = ({ addNotification }) => {
             />
           );
         })}
-        {tasks.length === 0 && <p style={{color:"wheat"}}>There are not tasks!</p>}
+        {tasks.length === 0 && (
+          <p style={{ color: "wheat" }}>There are not tasks!</p>
+        )}
       </div>
       {tasks.length === 0 || (
         <div className={Styles.deleteAll}>
-          <button className={Styles.button1}
+          <button
+            className={Styles.button1}
             onClick={() => handleOpenModal("isOpenDeleteModal")}
             disabled={checkedTasks.size === 0}
           >
